@@ -1,4 +1,5 @@
 <?php
+print("This is too fun with php");
 if(isset($_POST['message'])){
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -12,7 +13,7 @@ if(isset($_POST['message'])){
     'X-Mailer: PHP/'. phpversion();
 
 	$status = mail($to, $subject, $message, $headers);
-	
+
 	if($status == TRUE){	
 		$res['sendstatus'] = 'done';	
 		$res['message'] = 'Form Submission Successful';
@@ -22,5 +23,4 @@ if(isset($_POST['message'])){
 	}
 	echo json_encode($res);
 }
-
 ?>
