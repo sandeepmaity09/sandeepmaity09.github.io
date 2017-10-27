@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_POST['message'])){
 
 	$name = $_POST['name'];
@@ -20,12 +19,12 @@ if(isset($_POST['message'])){
 		$res['sendstatus'] = 'done';	
 		//Edit your message here
 		$res['message'] = 'Form Submission Successful';
+		echo("complete");
     }
 	else{
 		$res['message'] = 'Failed to send mail. Please mail me to sandeepmaity09@gmail.com';
+		echo("Not Complete");
 	}
-	
-	
 	echo json_encode($res);
 }
 
