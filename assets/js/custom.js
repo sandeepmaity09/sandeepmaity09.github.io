@@ -160,11 +160,11 @@
 											var ret = $.parseJSON(JSON.stringify(res));
 											response.html(ret.message).fadeIn(500);
 							}
+							
 						});
 				}           
             	return false;
 			});
-
 	});
 
 })(jQuery);
